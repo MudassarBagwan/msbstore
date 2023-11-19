@@ -28,7 +28,7 @@ SECRET_KEY =config('SECRET_KEY')
 DEBUG = config('DEBUG',default=True,cast=bool)
 
 
-ALLOWED_HOSTS = ['msb-env.eba-zcnrdkmb.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -97,7 +97,7 @@ AUTH_USER_MODEL= 'accounts.Account'
 
 DATABASES={
     'default': {
-        'ENGINE':'django.db.backends.mysql',
+        'ENGINE':'django.db.backends.postgresql',
         'NAME':config('DB_NAME'),
         'HOST':config('DB_HOST'),
         'USER':config('DB_USER'),

@@ -28,7 +28,7 @@ SECRET_KEY =config('SECRET_KEY')
 DEBUG = config('DEBUG',default=True,cast=bool)
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://msbshop-env.eba-9ftycx9c.us-west-2.elasticbeanstalk.com/']
 
 
 # Application definition

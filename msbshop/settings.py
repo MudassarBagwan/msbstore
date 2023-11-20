@@ -166,7 +166,7 @@ STATTICFILES_DIRS=[
 STATIC_URL = 'http://%s/%s/' %(AWS_S3_CUSTOM_DOMAIN,AWS_LOCATION)
 STATICFILES_STORAGE='storages.backends.s3boto3.S3Boto3Storage'
 
-#STATIC_URL = 'static/'
+STATIC_URL = 'static/'
 
 DEFAULT_FILE_STORAGE ='msbshop.media_storages.MediaStorage'
 MEDIA_URL='uploads/'

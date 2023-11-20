@@ -6,7 +6,7 @@
 
 <div class="container" style="margin: 0 auto;width: 50%;padding: 50px;background: #f1f1f1;margin-top: 50px;margin-bottom: 50px;">
  
-    <div  id="pdfFrame"  class="row invoice row-printable">
+    <div   class="row invoice row-printable">
         <div class="col-md-12">
             <!-- col-lg-12 start here -->
             <div class="panel panel-default plain" id="dash_0">
@@ -111,15 +111,7 @@
        
     </div>
 
-<button type="button" class="btn btn-success" onclick="printPDF()">Print PDF</button>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-<script>
-  function printPDF() {
-    const iframe = document.getElementById('pdfFrame');
-    div.contentWindow.print();
-  }
-</script>
 
 {%endblock%}

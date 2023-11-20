@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block body %}
+
+
 <div class="container" style="margin: 0 auto;width: 50%;padding: 50px;background: #f1f1f1;margin-top: 50px;margin-bottom: 50px;">
     <div class="row invoice row-printable">
         <div class="col-md-12">
@@ -9,6 +11,7 @@
             <div class="panel panel-default plain" id="dash_0">
                 <!-- Start .panel -->
                 <div class="panel-body p30">
+                    <iframe id="pdfFrame">
                     <div class="row">
                         <!-- Start .row -->
                         <div class="col-lg-6">
@@ -94,13 +97,24 @@
                         <!-- col-lg-12 end here -->
                     </div>
                     <!-- End .row -->
+                </iframe>
+                <button type="button" class="btn btn-success" onclick="printPDF()">Print PDF</button>
                 </div>
             </div>
+
+
             <!-- End .panel -->
         </div>
         <!-- col-lg-12 end here -->
     </div>
     </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+<script>
+  function printPDF() {
+    const iframe = document.getElementById('pdfFrame');
+    iframe.contentWindow.print();
+  }
+</script>
 
 {%endblock%}
